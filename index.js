@@ -17,7 +17,12 @@ function sendMail() {
             document.getElementById("subject").value = "";
             document.getElementById("message").value = "";
             console.log(res);
-            alert("your message sent successfully");
+            swal({
+                title: "Thank You!",
+                text: "Your message sent successfully!",
+                icon: "success",
+                button: "Close",
+              });
         })
         .catch((err) => console.log(err));
 }
